@@ -1,3 +1,5 @@
+import styles from './page.module.css'
+
 interface Props {
     params: {
         articleId: string
@@ -5,9 +7,8 @@ interface Props {
 }
 
 export default function ArticleShow(params: Props) {
-
-    return <main>
-        <div>{JSON.stringify(params)}</div>
+    return <main className={styles.container}>
+        <div className={styles.foo}>{JSON.stringify(params)}</div>
         <div>id: {params.params.articleId}</div>
     </main>
 }
