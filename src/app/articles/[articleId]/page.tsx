@@ -1,4 +1,5 @@
-import styles from './page.module.css'
+import Text from '@/components/Text';
+import { container } from './page.css';
 
 interface Props {
     params: {
@@ -6,9 +7,11 @@ interface Props {
     }
 }
 
+
 export default function ArticleShow(params: Props) {
-    return <main className={styles.container}>
-        <div className={styles.foo}>{JSON.stringify(params)}</div>
-        <div>id: {params.params.articleId}</div>
+    return <main className={container}>
+        <div>{JSON.stringify(params)}</div>
+        <Text size='Title'>id: {params.params.articleId}</Text>
+        <Text size='Title'>タイトル</Text>
     </main>
 }
