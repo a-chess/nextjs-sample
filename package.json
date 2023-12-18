@@ -6,15 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:css": "stylelint **/*.{css,scss,sass}"
+    "lint": "next lint"
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.14.0",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18",
-    "sass": "^1.69.5"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -23,9 +21,6 @@
     "@vanilla-extract/next-plugin": "^2.3.2",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
-    "eslint-plugin-css-modules": "^2.12.0",
-    "stylelint": "^16.0.2",
-    "stylelint-config-standard-scss": "^12.0.0",
     "typescript": "^5"
   }
 }
