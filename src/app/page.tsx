@@ -1,5 +1,10 @@
 import styles from './page.module.css'
 import NoteIcon from '../assets/note.svg'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Home screen',
+}
 
 export default function Home() {
   return (

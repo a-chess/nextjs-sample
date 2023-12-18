@@ -1,3 +1,4 @@
+const path = require('path')
 const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin')
 const withVanillaExtract = createVanillaExtractPlugin()
 
@@ -12,11 +13,12 @@ const nextConfig = {
         },
       ],
     })
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src')
     return config
   },
-  // images: {
-  //   disableStaticImages: true,
-  // },
+  images: {
+    disableStaticImages: true,
+  },
 }
 
 module.exports = withVanillaExtract(nextConfig)
