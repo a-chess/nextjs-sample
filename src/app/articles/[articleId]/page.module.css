@@ -3,5 +3,5 @@
 }
 
 .foo {
-    color: orange;
+    color: var(--variable);
 }
