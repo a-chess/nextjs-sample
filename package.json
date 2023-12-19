@@ -14,11 +14,14 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@reduxjs/toolkit": "1.9.7",
     "@vanilla-extract/css": "^1.14.0",
     "framer-motion": "^10.16.16",
-    "next": "14.0.4",
+    "next": "^14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-redux": "^8.1.3",
+    "redux-thunk": "^2"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
