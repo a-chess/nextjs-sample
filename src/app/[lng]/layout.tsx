@@ -1,8 +1,15 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import {ChakraProviders} from './chakraProvider'
-import StoreProvider from './reduxProvider'
+import {ChakraProviders} from '@/providers/chakraProvider'
+import StoreProvider from '@/providers/reduxProvider'
+import { dir } from 'i18next'
+import { languages } from '@/app/i18n/settings'
+
+
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }))
+}
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -14,11 +21,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: {
+    lng
+  }
 }: {
   children: React.ReactNode
+  params: {
+    lng: string
+  }
 }) {
   return (
-    <html lang="en">
+    <html lang={lng}>
       <body className={inter.className}>
         <StoreProvider>
           <ChakraProviders >

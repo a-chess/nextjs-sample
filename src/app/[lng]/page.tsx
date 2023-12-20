@@ -1,20 +1,27 @@
 import React from 'react'
 import styles from './page.module.css'
-import NoteIcon from '../assets/note.svg'
+import NoteIcon from '@/assets/note.svg'
 import { Metadata } from 'next'
 import Dummy from '@/components/Dummy'
+import { useTranslation } from '../i18n'
+import Head from 'next/head'
 
-export const metadata: Metadata = {
-  title: 'Home screen',
+interface PageProps {
+  params: {
+    lng: string
+  }
 }
 
-function Home() {
+async function Home({params: {lng}}: PageProps) {
+  const {t} = await useTranslation(lng)
+
   return (
     <main className={styles.container}>
+      {t('title')}
       <div className={styles.hoge}></div>
       <NoteIcon height={100} width={100}/>
 
-      <Dummy/>
+      <Dummy lng={lng}/>
     </main>
   )
 }

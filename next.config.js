@@ -20,7 +20,6 @@ const nextConfig = {
     disableStaticImages: true,
   },
   reactStrictMode: false
-
 }
 
 module.exports = withVanillaExtract(nextConfig)
