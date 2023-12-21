@@ -1,4 +1,4 @@
-import { FontSizeKeys, fontSize } from "@/app/const/fontSIze.css"
+import { FontSizeKeys, fontSize } from "@/const/fontSize.css"
 
 interface Props {
     size?: FontSizeKeys
