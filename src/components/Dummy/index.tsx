@@ -1,14 +1,13 @@
 'use client'
-import { useTranslation } from '@/app/i18n/client'
+import { useTranslation } from '@/i18n/client'
 import React from 'react'
 import { useInjection } from './hooks'
+import { useLocale } from '@/providers/localeProvider'
 
-interface Props {
-    lng: string
-}
+function Dummy() {
+    const {locale} = useLocale()
+    const {t} = useTranslation(locale)
 
-function Dummy({lng}: Props) {
-    const {t} = useTranslation(lng)
     const {value} = useInjection()
 
     return <div>
